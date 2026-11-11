@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
 import {
   ArrowDown, ArrowUp, BookOpen, Check, ChevronDown, ChevronRight, CircleHelp,
   Clipboard, Clock3, FileText, FlaskConical, FolderOpen, Gauge, Library,
@@ -509,4 +510,8 @@ function EvaluationView({ documents, indexedPages, evaluations }) {
   );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')).render(
+  <HashRouter>
+    <App />
+  </HashRouter>,
+);
